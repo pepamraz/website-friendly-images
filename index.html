@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script type="module" src="script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <title>Optimalizátor obrázků</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Optimalizátor obrázků pro web<img src="favicon.png" width="32" style="margin-left: 8px;"></h1>
+      <p>
+        <i style="color: #f2df0d;" class="fa-solid fa-triangle-exclamation big"></i> Obrázky na webech jsou
+        běžně až o <strong>50-200 % větší</strong>, než musí být.
+      </p>
+      <p>
+        <i style="color: var(--pico-primary);" class="fa-solid fa-file-image big"></i> Běžný obrázek by měl mít velikost
+        do <strong>100 kB.</strong>
+      </p>
+      <form id="urlForm">
+        <input
+          type="url"
+          id="websiteUrl"
+          placeholder="Vložte URL webu"
+          required
+        />
+        <div class="compression">
+          <p id="compressionStrengthText">80%</p>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="80"
+            id="compressionStrength"
+          />
+        </div>
+        <button type="submit">Zpracovat</button>
+      </form>
+      <div id="result"></div>
+    </div>
+
+    <div id="author">
+      aplikace je součástí webu
+      <a href="http://pepamraz.cz" target="_blank">pepamraz.cz <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+  </body>
+</html>

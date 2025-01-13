@@ -1,0 +1,48 @@
+body {
+  min-height: 100vh;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#app{
+    max-width: 90%;
+}
+h1{
+    padding-top:64px;
+}
+input,
+button {
+  padding: 10px;
+  margin-block: 10px;
+}
+form#urlForm {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.compression {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.compression * {
+  margin: 0;
+}
+
+.compression input {
+  flex: 1;
+}
+#author{
+    padding-bottom: 12px;
+}
+
+input[type="range"]{
+  margin: 0;
+}
+
+i.big{
+  font-size: 32px;
+  width: 48px;
+}
